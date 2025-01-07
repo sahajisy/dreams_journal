@@ -1,0 +1,10 @@
+    <h1>Dreams Journal</h1>
+    <hr>
+    <p>Here are my targets of life, even if small or big.</p>
+    <hr>
+<%= @posts.each do |post|%>
+    <h2><%= post.title %></h2>
+    <div><%= truncate(post.body, :length => 35)%></div>
+    <br>
+    <%= link_to "Read Post", post %>
+<%end%>
